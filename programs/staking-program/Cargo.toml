@@ -1,0 +1,22 @@
+[package]
+name = "staking-program"
+version = "0.1.0"
+description = "Created with Anchor"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "staking_program"
+
+[features]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+cpi = ["no-entrypoint"]
+default = []
+
+[dependencies]
+anchor-lang = { git = "https://github.com/coral-xyz/anchor", features=["init-if-needed"] }
+anchor-spl = { git = "https://github.com/coral-xyz/anchor" }
+solana-program = "1.14.17"
+toml_datetime = "=0.6.1"
